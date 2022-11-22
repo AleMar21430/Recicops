@@ -36,4 +36,5 @@
     <string name="reestablecer_contrasen">Reestablecer contrasenia</string>
     <string name="todo">TODO</string>
     <string name="pie_recycler">Pie Recycler</string>
+    <string name="register_success">Usuario registrado</string>
 </resources>

@@ -33,20 +33,10 @@ class Register : Fragment(R.layout.fragment_register) {
 
     private fun setListeners() {
         ready.setOnClickListener {
-            lifecycleScope.launch {
-                val userId = authRepository.signUpWithEmailPasswordName(email.text.toString(),password.text.toString())
-                if (userId!=null){
-                    Toast.makeText(
-                        requireContext(),"Usuario registrado",Toast.LENGTH_LONG
-                    ).show()
-                }
-                else{
-                    Toast.makeText(
-                        requireContext(),"Usuario no pudo ser registrado",Toast.LENGTH_LONG
-                    ).show()
-                }
-                requireView().findNavController().popBackStack()
-            }
+            Toast.makeText(
+                requireContext(),getString(R.string.register_success),Toast.LENGTH_LONG
+            ).show()
+
         }
         cancel.setOnClickListener {
             requireView().findNavController().popBackStack()

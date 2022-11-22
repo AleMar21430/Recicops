@@ -9,6 +9,7 @@ import com.marti21430.recicops.R
 import com.marti21430.recicops.data.repository.auth.AuthRepository
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+
 class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var authRepository: AuthRepository

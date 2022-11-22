@@ -14,3 +14,5 @@ Firebase (para guardar datos de los usuarios y centros)
 
 # Librerias
 Para resolver el problema de mostrar estadisticas de forma bonita y visualmente amigable, se usara [HoloGraphLibrary](https://github.com/Androguide/HoloGraphLibrary)
+# Known Issues:
+Cuando se selecciona la vista de progreso, el icono de los mapas se alza, si se presiona ya en la vista el error se corrige.

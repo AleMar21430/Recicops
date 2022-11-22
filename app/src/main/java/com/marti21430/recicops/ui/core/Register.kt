@@ -8,11 +8,9 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.findNavController
 import com.marti21430.recicops.R
-import com.marti21430.recicops.data.repository.AuthRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 class Register : Fragment(R.layout.fragment_register) {
     private lateinit var email: EditText
@@ -34,7 +32,7 @@ class Register : Fragment(R.layout.fragment_register) {
         ready.setOnClickListener {
 
             CoroutineScope(Dispatchers.IO).launch {
-                requireContext().dataStore.savePreferencesValue(KEY_EMAIL, email.text.toString())
+                requireContext().dataStore.savePreferencesValue(KEY_USERNAME, email.text.toString())
                 requireContext().dataStore.savePreferencesValue(KEY_PASSWORD, password.text.toString())
                 requireContext().dataStore.savePreferencesValue(KEY_LOGOUT, "false")
             }

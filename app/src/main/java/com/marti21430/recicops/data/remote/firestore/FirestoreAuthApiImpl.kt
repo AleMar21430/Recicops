@@ -1,8 +1,8 @@
 package com.marti21430.recicops.data.remote.firestore
 
-import com.google.firebase.auth.FirebaseAuth
 import com.marti21430.recicops.data.Resource
 import com.marti21430.recicops.data.remote.api.AuthApi
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.tasks.await
 
 class FirestoreAuthApiImpl(
@@ -17,29 +17,11 @@ class FirestoreAuthApiImpl(
 
             val user = response.user
             if (user != null)
-                Resource.Success(result = user.uid)
+                Resource.Success(data = user.uid)
             else
-                Resource.Failure(exception = "No se encontro el usuario")
+                Resource.Error(message = "User not found")
         } catch (e: Exception) {
-            Resource.Failure(exception = "No se encontro al usuario")
+            Resource.Error(message = "User not found")
         }
     }
-
-    override suspend fun signUpWithEmailAndPassword(
-        email: String,
-        password: String
-    ): Resource<String> {
-        return try {
-            val response = api.createUserWithEmailAndPassword(email, password).await()
-
-            val user = response.user
-            if (user != null)
-                Resource.Success(result = user.uid)
-            else
-                Resource.Failure(exception = "No se encontro el usuario")
-        } catch (e: Exception) {
-            Resource.Failure(exception = "No se encontro al usuario")
-        }
-    }
-
 }

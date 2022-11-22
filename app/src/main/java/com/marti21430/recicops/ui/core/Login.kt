@@ -28,7 +28,7 @@ class Login : Fragment(R.layout.fragment_login) {
         email = view.findViewById(R.id.edit_loginFragment_email)
         password = view.findViewById(R.id.edit_loginFragment_password)
         CoroutineScope(Dispatchers.IO).launch {
-            currentUser = requireContext().dataStore.getPreferencesValue(KEY_EMAIL).toString()
+            currentUser = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
             currentPassword = requireContext().dataStore.getPreferencesValue(KEY_PASSWORD).toString()
         }
         checkIsLogged()
@@ -68,7 +68,7 @@ class Login : Fragment(R.layout.fragment_login) {
 
     private fun loginUser(email: String, password: String) {
         CoroutineScope(Dispatchers.IO).launch {
-            currentUser = requireContext().dataStore.getPreferencesValue(KEY_EMAIL).toString()
+            currentUser = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
             currentPassword = requireContext().dataStore.getPreferencesValue(KEY_PASSWORD).toString()
         }
         if (email == currentUser && password == currentPassword) {
@@ -83,7 +83,7 @@ class Login : Fragment(R.layout.fragment_login) {
 
     private fun saveLoggedUser(email: String, password: String) {
         CoroutineScope(Dispatchers.IO).launch {
-            requireContext().dataStore.savePreferencesValue(KEY_EMAIL, email)
+            requireContext().dataStore.savePreferencesValue(KEY_USERNAME, email)
         }
         CoroutineScope(Dispatchers.IO).launch {
             requireContext().dataStore.savePreferencesValue(KEY_PASSWORD, password)

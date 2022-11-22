@@ -9,7 +9,7 @@ import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.flow.first
 
 const val PREFERENCES_NAME = "settings"
-const val KEY_EMAIL = "21430@uvg"
+const val KEY_USERNAME = "21430@uvg"
 const val KEY_PASSWORD = "21430"
 const val KEY_LOGOUT = "false"
 

@@ -36,7 +36,7 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
 
     private  fun setName(){
         CoroutineScope(Dispatchers.IO).launch {
-            username.setText(requireContext().dataStore.getPreferencesValue(KEY_EMAIL).toString())
+            username.setText(requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString())
         }
     }
 

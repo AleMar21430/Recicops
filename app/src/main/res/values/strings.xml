@@ -41,5 +41,13 @@
 
     <string name="my_email"></string>
     <string name="my_password"></string>
+    <string name="ingresar_datos">Ingresar Datos</string>
+    <string name="libras_de_basura_generada">Libras de basura generada</string>
+    <string name="bolsas_de_pl_stico_utilizadas">Bolsas de plástico utilizadas</string>
+    <string name="botellas_de_vidrio_utilizadas">Botellas de vidrio utilizadas</string>
+    <string name="hojas_de_papel_utilizadas">Hojas de papel utilizadas</string>
+    <string name="botellas_de_pl_stico_utilizadas">Botellas de plástico utilizadas</string>
+    <string name="envases_de_pl_stico_utilizados">Envases de plástico utilizados</string>
+    <string name="envases_de_duroport_utilizados">Envases de duroport utilizados</string>
 
 </resources>

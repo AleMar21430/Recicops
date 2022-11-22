@@ -6,11 +6,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import com.marti21430.recicops.R
 import com.marti21430.recicops.data.repository.AuthRepository
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class Register : Fragment(R.layout.fragment_register) {
@@ -23,7 +21,7 @@ class Register : Fragment(R.layout.fragment_register) {
     lateinit var authRepository: AuthRepository
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        username = view.findViewById(R.id.edit_registerFragment_username)
+        username = view.findViewById(R.id.edit_PlasticPounds)
         email = view.findViewById(R.id.edit_registerFragment_email)
         password = view.findViewById(R.id.edit_registerFragment_password)
         ready = view.findViewById(R.id.button_Register)

@@ -2,24 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_item_myprogress"
-        android:title="Mi progreso"
-        android:icon="@drawable/ic_baseline_favorite_24"
-        />
+        android:icon="?android:attr/actionModeFindDrawable"
+        android:title="" />
 
     <item
         android:id="@+id/menu_item_consumos"
-        android:title="Consumos"
-        android:icon="@drawable/ic_baseline_check_circle_24"
-        />
+        android:icon="@android:drawable/ic_menu_upload"
+        android:title="" />
 
     <item
         android:id="@+id/menu_item_location"
-        android:title="Centros"
         android:icon="@drawable/ic_baseline_location_on_24"
-        />
+        android:title="" />
     <item
         android:id="@+id/menu_item_profile"
-        android:title="Mi perfil"
         android:icon="@drawable/ic_baseline_settings_24"
-        />
+        android:title="" />
 </menu>

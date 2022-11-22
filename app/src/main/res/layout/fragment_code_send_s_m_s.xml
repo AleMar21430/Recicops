@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.core.CodeSendSMS">
+
+    <ImageView
+
+        android:id="@+id/iv_codesendF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/recycops"
+        />
+    <TextView
+        android:id="@+id/emailexample_codesendF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Se envio un codigo telefono"
+        app:layout_constraintTop_toBottomOf="@+id/iv_codesendF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+
+        ></TextView>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout_codesendF_sentcode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:hint="Ingresa el codigo"
+        app:layout_constraintTop_toBottomOf="@id/emailexample_codesendF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btn_codesendF_sendagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout_codesendF_sentcode"
+        android:text="Enviar nuevamente"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        ></Button>
+    <Button
+        android:id="@+id/btn_codesendF_verificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout_codesendF_sentcode"
+        android:text="Verificar"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="100dp"
+        ></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

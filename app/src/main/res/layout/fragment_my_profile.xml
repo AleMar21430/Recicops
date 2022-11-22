@@ -8,47 +8,37 @@
 
     <Button
         android:id="@+id/button_cerrar_sesion"
-        android:textAllCaps="false"
-        android:textStyle="normal"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/margin_btn_bottom"
         android:layout_marginEnd="10dp"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="@color/white"
         android:text="@string/cerrar_sesi_n"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/grey"
+        android:textSize="15dp"
+        android:textStyle="normal"
+        app:icon="@drawable/ic_baseline_close_24"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation_mainActivity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/margin_btn_bottom"
         app:layout_constraintTop_toBottomOf="@+id/button_quienes_somos"
-        tools:ignore="TextContrastCheck"
-        android:textColor="@color/grey"
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-        android:backgroundTint="@color/white"
-        android:textSize="15dp"
-        app:icon="@drawable/ic_baseline_close_24"
-        android:textAlignment="textStart"
-        >
-    </Button>
+        tools:ignore="TextContrastCheck"></Button>
 
     <TextView
-        android:id="@+id/name_fmyprofile_textView"
+        android:id="@+id/text_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
         android:text="@string/nombre_y_apellido"
         android:textSize="24sp"
-        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/icon_loginFragment" />
-    <TextView
-        android:id="@+id/email_fmyprofile_txtv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/email_example"
-        app:layout_constraintTop_toBottomOf="@+id/name_fmyprofile_textView"
-        app:layout_constraintStart_toStartOf="@+id/name_fmyprofile_textView"
-        >
-
-    </TextView>
 
     <ImageView
         android:id="@+id/icon_loginFragment"
@@ -60,26 +50,27 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ImageContrastCheck"
         tools:srcCompat="@tools:sample/avatars" />
+
     <Button
         android:id="@+id/button_consumoscanjeados_myprofile"
         style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-        android:textAllCaps="false"
-        android:backgroundTint="@color/white"
-        android:textSize="15dp"
-        app:icon="@drawable/ic_baseline_check_24"
-        android:textAlignment="textStart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="@dimen/margin_btn_bottom"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="@dimen/margin_btn_bottom"
+        android:backgroundTint="@color/white"
         android:text="@string/consumos_canjeados"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/grey"
+        android:textSize="15dp"
+        app:icon="@drawable/ic_baseline_check_24"
+        app:layout_constraintBottom_toTopOf="@+id/button_como_usar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_fmyprofile_txtv"
-        tools:ignore="TextContrastCheck"
-        android:textColor="@color/grey"/>
+        app:layout_constraintTop_toBottomOf="@+id/text_Name"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button_como_usar"
@@ -96,9 +87,10 @@
         android:textColor="@color/grey"
         android:textSize="15dp"
         app:icon="@drawable/ic_baseline_error_24"
+        app:layout_constraintBottom_toTopOf="@+id/button_quienes_somos"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/button_consumoscanjeados_myprofile"
         tools:ignore="TextContrastCheck">
 
@@ -107,24 +99,24 @@
 
     <Button
         android:id="@+id/button_quienes_somos"
-        android:textAllCaps="false"
         style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-        android:backgroundTint="@color/white"
-        android:textSize="15dp"
-        app:icon="@drawable/ic_baseline_error_outline_24"
-        android:textAlignment="textStart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="@dimen/margin_btn_bottom"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="@dimen/margin_btn_bottom"
+        android:backgroundTint="@color/white"
         android:text="@string/quienes_somos"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/grey"
+        android:textSize="15dp"
+        app:icon="@drawable/ic_baseline_error_outline_24"
+        app:layout_constraintBottom_toTopOf="@+id/button_cerrar_sesion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_como_usar"
-        tools:ignore="TextContrastCheck"
-        android:textColor="@color/grey"/>
+        tools:ignore="TextContrastCheck" />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation_mainActivity"
         android:layout_width="0dp"

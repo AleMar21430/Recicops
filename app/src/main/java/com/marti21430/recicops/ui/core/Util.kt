@@ -9,7 +9,9 @@ import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.flow.first
 
 const val PREFERENCES_NAME = "settings"
-const val KEY_EMAIL = "email"
+const val KEY_EMAIL = "21430@uvg"
+const val KEY_PASSWORD = "21430"
+const val KEY_LOGOUT = "false"
 
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = PREFERENCES_NAME)
 
@@ -25,6 +27,8 @@ suspend fun DataStore<Preferences>.getPreferencesValue(key: String): String? {
     val preferences = data.first()
     return preferences[dataStoreKey]
 }
+
+
 
 suspend fun DataStore<Preferences>.removePreferencesValue(key: String) {
     val dataStoreKey = stringPreferencesKey(key)

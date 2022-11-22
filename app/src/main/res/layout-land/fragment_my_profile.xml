@@ -8,64 +8,112 @@
 
     <Button
         android:id="@+id/button_cerrar_sesion"
-        android:layout_width="250dp"
+        android:textAllCaps="false"
+        android:textStyle="normal"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="@string/cerrar_sesi_n"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_btn_bottom"
         app:layout_constraintTop_toBottomOf="@+id/button_quienes_somos"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck"
+        android:textColor="@color/grey"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:backgroundTint="@color/white"
+        android:textSize="15dp"
+        app:icon="@drawable/ic_baseline_close_24"
+        android:textAlignment="textStart"
+        >
+    </Button>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:text="@string/nombre_y_apellido"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/icon_loginFragment"
-        app:layout_constraintTop_toBottomOf="@+id/icon_loginFragment" />
-
-    <ImageView
-        android:id="@+id/icon_loginFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_configuracion"
-        android:layout_width="250dp"
+        android:id="@+id/button_consumoscanjeados_myprofile"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:text="@string/configuraci_n"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/consumos_canjeados"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/grey"
+        android:textSize="15dp"
+        app:icon="@drawable/ic_baseline_check_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_Name"
         tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button_como_usar"
-        android:layout_width="250dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/white"
         android:text="@string/c_mo_usar_esta_app"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/grey"
+        android:textSize="15dp"
+        app:icon="@drawable/ic_baseline_error_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_configuracion"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/button_consumoscanjeados_myprofile"
+        tools:ignore="TextContrastCheck">
+
+
+    </Button>
 
     <Button
         android:id="@+id/button_quienes_somos"
-        android:layout_width="250dp"
+        android:textAllCaps="false"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:backgroundTint="@color/white"
+        android:textSize="15dp"
+        app:icon="@drawable/ic_baseline_error_outline_24"
+        android:textAlignment="textStart"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/margin_btn_bottom"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="@dimen/margin_btn_bottom"
         android:text="@string/quienes_somos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_como_usar"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck"
+        android:textColor="@color/grey"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation_mainActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:backgroundTint="@color/purple_700"
+        app:menu="@menu/bottom_nav_menu"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

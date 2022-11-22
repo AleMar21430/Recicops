@@ -9,19 +9,20 @@ import android.widget.Toast
 import androidx.navigation.findNavController
 import com.marti21430.recicops.R
 import com.marti21430.recicops.data.repository.AuthRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class Register : Fragment(R.layout.fragment_register) {
-    private lateinit var username: EditText
     private lateinit var email: EditText
     private lateinit var password: EditText
     private lateinit var ready: Button
     private lateinit var cancel: Button
-    @Inject
-    lateinit var authRepository: AuthRepository
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        username = view.findViewById(R.id.edit_PlasticPounds)
         email = view.findViewById(R.id.edit_registerFragment_email)
         password = view.findViewById(R.id.edit_registerFragment_password)
         ready = view.findViewById(R.id.button_Register)
@@ -31,13 +32,23 @@ class Register : Fragment(R.layout.fragment_register) {
 
     private fun setListeners() {
         ready.setOnClickListener {
+
+            CoroutineScope(Dispatchers.IO).launch {
+                requireContext().dataStore.savePreferencesValue(KEY_EMAIL, email.text.toString())
+                requireContext().dataStore.savePreferencesValue(KEY_PASSWORD, password.text.toString())
+                requireContext().dataStore.savePreferencesValue(KEY_LOGOUT, "false")
+            }
             Toast.makeText(
-                requireContext(),getString(R.string.register_success),Toast.LENGTH_LONG
+                    requireContext(),getString(R.string.register_success),Toast.LENGTH_LONG
             ).show()
-            requireView().findNavController().popBackStack()
+            requireView().findNavController().navigate(
+                RegisterDirections.actionRegisterToLogin()
+            )
         }
         cancel.setOnClickListener {
-            requireView().findNavController().popBackStack()
+            requireView().findNavController().navigate(
+                RegisterDirections.actionRegisterToLogin()
+            )
         }
     }
 }

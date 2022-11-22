@@ -42,13 +42,11 @@
 
     <Button
         android:id="@+id/button_Map_Img"
-        android:layout_width="0dp"
-        android:layout_height="214dp"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:foreground="@drawable/uvg"
         app:layout_constraintBottom_toTopOf="@+id/button_Maps"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         tools:ignore="SpeakableTextPresentCheck"

@@ -3,13 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/UVG/Recicops/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.338" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.338" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.338" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.338" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/drawable/ic_baseline_sms_24.xml" value="0.338" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/drawable/ic_launcher_background.xml" value="0.338" />
         <entry key="..\:/UVG/Recicops/app/src/main/res/layout-land/fragment_login.xml" value="0.2788966725043783" />
         <entry key="..\:/UVG/Recicops/app/src/main/res/layout-land/fragment_register.xml" value="0.2788966725043783" />
         <entry key="..\:/UVG/Recicops/app/src/main/res/layout/activity_main.xml" value="0.26721014492753625" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/layout/fragment_about_us.xml" value="0.33177083333333335" />
         <entry key="..\:/UVG/Recicops/app/src/main/res/layout/fragment_code_send.xml" value="0.297554347826087" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/layout/fragment_code_send_s_m_s.xml" value="0.33177083333333335" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/layout/fragment_exchange_centers.xml" value="0.33177083333333335" />
         <entry key="..\:/UVG/Recicops/app/src/main/res/layout/fragment_login.xml" value="0.33" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/layout/fragment_my_profile.xml" value="0.33177083333333335" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/layout/fragment_my_trash.xml" value="0.33177083333333335" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/layout/fragment_profile_update.xml" value="0.33177083333333335" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/layout/fragment_progress.xml" value="0.1606962663975782" />
         <entry key="..\:/UVG/Recicops/app/src/main/res/layout/fragment_register.xml" value="0.33" />
         <entry key="..\:/UVG/Recicops/app/src/main/res/layout/fragment_stablish_new_p.xml" value="0.33177083333333335" />
+        <entry key="..\:/UVG/Recicops/app/src/main/res/menu/bottom_nav_menu.xml" value="0.33177083333333335" />
         <entry key="..\:/UVG/proyecto-plataformas-moviles/Recicops/app/src/main/res/layout-land/fragment_login.xml" value="0.2626970227670753" />
         <entry key="..\:/UVG/proyecto-plataformas-moviles/Recicops/app/src/main/res/layout-land/fragment_my_profile.xml" value="0.2626970227670753" />
         <entry key="..\:/UVG/proyecto-plataformas-moviles/Recicops/app/src/main/res/layout-land/fragment_profile_settings.xml" value="0.2626970227670753" />

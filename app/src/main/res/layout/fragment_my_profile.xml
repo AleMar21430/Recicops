@@ -80,47 +80,27 @@
         app:layout_constraintTop_toBottomOf="@+id/email_fmyprofile_txtv"
         tools:ignore="TextContrastCheck"
         android:textColor="@color/grey"/>
-    <Button
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-        android:backgroundTint="@color/white"
-        android:textSize="15dp"
-        android:textAllCaps="false"
-        app:icon="@drawable/ic_baseline_settings_24"
-        android:textAlignment="textStart"
-        android:id="@+id/button_configuracion"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="@dimen/margin_btn_bottom"
-        android:text="@string/configuraci_n"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_consumoscanjeados_myprofile"
-        tools:ignore="TextContrastCheck"
-        android:textColor="@color/grey"/>
 
     <Button
         android:id="@+id/button_como_usar"
-        android:textAllCaps="false"
         style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-        android:backgroundTint="@color/white"
-        android:textSize="15dp"
-        app:icon="@drawable/ic_baseline_error_24"
-        android:textAlignment="textStart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_btn_bottom"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/white"
         android:text="@string/c_mo_usar_esta_app"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/grey"
+        android:textSize="15dp"
+        app:icon="@drawable/ic_baseline_error_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_configuracion"
-        tools:ignore="TextContrastCheck"
-        android:textColor="@color/grey"
 
-        >
+        app:layout_constraintTop_toBottomOf="@+id/button_consumoscanjeados_myprofile"
+        tools:ignore="TextContrastCheck">
 
 
     </Button>

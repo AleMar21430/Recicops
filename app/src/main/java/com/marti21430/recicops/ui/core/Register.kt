@@ -36,7 +36,7 @@ class Register : Fragment(R.layout.fragment_register) {
             Toast.makeText(
                 requireContext(),getString(R.string.register_success),Toast.LENGTH_LONG
             ).show()
-
+            requireView().findNavController().popBackStack()
         }
         cancel.setOnClickListener {
             requireView().findNavController().popBackStack()

@@ -1,7 +1,5 @@
 # Proyecto plataformas móviles
 # Integrantes:
-Diego Andrés Alonzo Medinilla   - 20172  
-
 Alejandro José Martínez de León - 21430
 
 # Descripción:

@@ -3,16 +3,38 @@ package com.marti21430.recicops.ui.core
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.navigation.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.marti21430.recicops.R
 
 class My_Trash : Fragment(R.layout.fragment_my_trash) {
+    private lateinit var enterdata: Button
     private lateinit var bottombar: BottomNavigationView
+    private lateinit var botellas_plast: EditText
+    private lateinit var botellas_vid: EditText
+    private lateinit var bolsas_plast: EditText
+    private lateinit var envases_plast: EditText
+    private lateinit var envases_duro: EditText
+    private lateinit var libras_basura: EditText
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bottombar = view.findViewById(R.id.bottomNavigation_mainActivity)
+        enterdata = view.findViewById(R.id.button)
+
+        botellas_plast = view.findViewById(R.id.editText_botellas_plast)
+        botellas_vid = view.findViewById(R.id.editText_botellas_vid)
+        bolsas_plast = view.findViewById(R.id.editText_bolsas_plast)
+        envases_plast = view.findViewById(R.id.editText_envases_plast)
+        envases_duro = view.findViewById(R.id.editText_envases_duro)
+        libras_basura = view.findViewById(R.id.editText_libras_basura)
+
         setBottomBar()
+        setListeners()
     }
     private fun setBottomBar(){
         bottombar.selectedItemId = R.id.menu_item_my_trash
@@ -27,6 +49,11 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
                 )
             }
             true
+        }
+    }
+    private fun setListeners() {
+        enterdata.setOnClickListener {
+            var var1 = botellas_plast.text.toString().toFloat()
         }
     }
 }

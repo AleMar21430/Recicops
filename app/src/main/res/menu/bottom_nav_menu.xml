@@ -3,19 +3,23 @@
     <item
         android:id="@+id/menu_item_myprogress"
         android:icon="?android:attr/actionModeFindDrawable"
+        android:iconTint="#000000"
         android:title="" />
 
     <item
         android:id="@+id/menu_item_my_trash"
         android:icon="@android:drawable/ic_menu_upload"
+        android:iconTint="#000000"
         android:title="" />
 
     <item
         android:id="@+id/menu_item_location"
         android:icon="@drawable/ic_baseline_location_on_24"
+        android:iconTint="#000000"
         android:title="" />
     <item
         android:id="@+id/menu_item_profile"
         android:icon="@drawable/ic_baseline_settings_24"
+        android:iconTint="#000000"
         android:title="" />
 </menu>

@@ -10,7 +10,7 @@
         android:id="@+id/bottomNavigation_mainActivity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:backgroundTint="@color/purple_700"
+        app:backgroundTint="@color/green_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/editText_botellas_plast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -63,7 +63,7 @@
                 android:layout_height="10dp" />
 
             <EditText
-                android:id="@+id/editTextNumber6"
+                android:id="@+id/editText_botellas_vid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -79,7 +79,7 @@
                 android:layout_height="10dp" />
 
             <EditText
-                android:id="@+id/editTextNumber3"
+                android:id="@+id/editText_envases_duro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -95,7 +95,7 @@
                 android:layout_height="10dp" />
 
             <EditText
-                android:id="@+id/editTextNumber4"
+                android:id="@+id/editText_envases_plast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -111,7 +111,7 @@
                 android:layout_height="10dp" />
 
             <EditText
-                android:id="@+id/editTextNumber2"
+                android:id="@+id/editText_bolsas_plast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -127,7 +127,7 @@
                 android:layout_height="10dp" />
 
             <EditText
-                android:id="@+id/editTextNumber7"
+                android:id="@+id/editText_libras_basura"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"

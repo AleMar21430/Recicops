@@ -85,7 +85,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:backgroundTint="@color/purple_700"
+        app:backgroundTint="@color/green_700"
         app:menu="@menu/bottom_nav_menu"
         />
 

@@ -10,7 +10,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.marti21430.recicops.R
 
 class Past_Recyclers : Fragment() {
-    private lateinit var bottombar: BottomNavigationView
     private lateinit var botellas_plast: TextView
     private lateinit var botellas_vid: TextView
     private lateinit var bolsas_plast: TextView
@@ -22,13 +21,11 @@ class Past_Recyclers : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         botellas_plast = view.findViewById(R.id.textView_botellas_plast)
         botellas_vid = view.findViewById(R.id.textView_botellas_vid)
-        bolsas_plast = view.findViewById(R.id.textView_botellas_plast)
+        bolsas_plast = view.findViewById(R.id.textView_bolsas_plast)
         envases_plast = view.findViewById(R.id.textView_envases_plast)
         envases_duro = view.findViewById(R.id.textView_envases_duro)
         libras_basura = view.findViewById(R.id.textView_libras_basura)
 
-        bottombar = view.findViewById(R.id.bottomNavigation_mainActivity)
-        bottombar.selectedItemId = R.id.menu_item_location
     }
 
     private  fun getData() {

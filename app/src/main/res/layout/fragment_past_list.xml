@@ -26,7 +26,7 @@
         android:id="@+id/bottomNavigation_mainActivity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:backgroundTint="@color/purple_700"
+        app:backgroundTint="@color/green_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -18,7 +18,6 @@ import kotlinx.coroutines.launch
 import java.util.*
 import javax.inject.Inject
 
-//@AndroidEntryPoint
 class My_Trash : Fragment(R.layout.fragment_my_trash) {
     private lateinit var enterdata: Button
     private lateinit var bottombar: BottomNavigationView

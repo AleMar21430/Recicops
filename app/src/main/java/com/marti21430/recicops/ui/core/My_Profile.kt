@@ -12,7 +12,6 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
 
     private lateinit var tutorial: Button
     private lateinit var logout: Button
-    private lateinit var canjes: Button
     private lateinit var whoarewe: Button
     private lateinit var bottombar : BottomNavigationView
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -21,7 +20,6 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
         tutorial = view.findViewById(R.id.button_como_usar)
         logout = view.findViewById(R.id.button_cerrar_sesion)
         whoarewe = view.findViewById(R.id.button_quienes_somos)
-        canjes = view.findViewById(R.id.button_consumoscanjeados_myprofile)
         bottombar = view.findViewById(R.id.bottomNavigation_mainActivity)
         bottombar.selectedItemId = R.id.menu_item_profile
         setListeners()
@@ -37,9 +35,6 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
                 My_ProfileDirections.actionMyProfileToLogin()
             )
         }
-        canjes.setOnClickListener {
-
-        }
         whoarewe.setOnClickListener {
             requireView().findNavController().navigate(My_ProfileDirections.actionMyProfileToInfo2())
         }
@@ -54,7 +49,7 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
                 R.id.menu_item_location -> requireView().findNavController().navigate(
                     My_ProfileDirections.actionMyProfileToExchangeCenters()
                 )
-                R.id.menu_item_consumos -> requireView().findNavController().navigate(
+                R.id.menu_item_my_trash -> requireView().findNavController().navigate(
                     My_ProfileDirections.actionMyProfileToMyTrash()
                 )
             }

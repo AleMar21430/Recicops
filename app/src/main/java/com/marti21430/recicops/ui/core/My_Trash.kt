@@ -15,7 +15,7 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
         setBottomBar()
     }
     private fun setBottomBar(){
-        bottombar.selectedItemId = R.id.menu_item_consumos
+        bottombar.selectedItemId = R.id.menu_item_my_trash
         bottombar.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.menu_item_myprogress -> requireView().findNavController().navigate(My_TrashDirections.actionMyTrashToProgress2())

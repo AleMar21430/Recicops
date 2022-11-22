@@ -6,7 +6,7 @@
         android:title="" />
 
     <item
-        android:id="@+id/menu_item_consumos"
+        android:id="@+id/menu_item_my_trash"
         android:icon="@android:drawable/ic_menu_upload"
         android:title="" />
 

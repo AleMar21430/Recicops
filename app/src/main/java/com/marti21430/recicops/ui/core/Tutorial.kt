@@ -25,7 +25,7 @@ class Tutorial : Fragment(R.layout.fragment_tutorial) {
                 R.id.menu_item_location -> requireView().findNavController().navigate(
                     TutorialDirections.actionTutorialToExchangeCenters()
                 )
-                R.id.menu_item_consumos -> requireView().findNavController().navigate(
+                R.id.menu_item_my_trash -> requireView().findNavController().navigate(
                     TutorialDirections.actionTutorialToMyTrash()
                 )
                 R.id.menu_item_profile -> requireView().findNavController().popBackStack()

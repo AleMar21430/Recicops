@@ -25,7 +25,7 @@ class Info : Fragment(R.layout.fragment_about_us,) {
                 R.id.menu_item_location -> requireView().findNavController().navigate(
                     InfoDirections.actionInfo2ToExchangeCenters()
                 )
-                R.id.menu_item_consumos -> requireView().findNavController().navigate(
+                R.id.menu_item_my_trash -> requireView().findNavController().navigate(
                     InfoDirections.actionInfo2ToMyTrash()
                 )
                 R.id.menu_item_profile -> requireView().findNavController().popBackStack()

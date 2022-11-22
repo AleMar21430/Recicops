@@ -57,5 +57,6 @@
     <string name="botellas_de_vidrio">Botellas de Vidrio:</string>
     <string name="libras_de_basura">Libras de Basura:</string>
     <string name="fecha">Fecha</string>
+    <string name="firebase_fetch_error">Error, No hay conección al internet</string>
 
 </resources>

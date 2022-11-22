@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
 import androidx.navigation.findNavController
-import com.google.android.gms.maps.MapView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.marti21430.recicops.R
 
@@ -56,7 +55,7 @@ class Exchange_Centers : Fragment(R.layout.fragment_exchange_centers) {
                         Exchange_CentersDirections.actionExchangeCentersToProgress()
                     )
                 }
-                R.id.menu_item_consumos -> {
+                R.id.menu_item_my_trash -> {
                     requireView().findNavController().navigate(
                         Exchange_CentersDirections.actionExchangeCentersToMyTrash()
                     )

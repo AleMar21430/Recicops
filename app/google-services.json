@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "413121415231",
-    "project_id": "proyectppm",
-    "storage_bucket": "proyectppm.appspot.com"
+    "project_number": "364088621996",
+    "project_id": "recicops",
+    "storage_bucket": "recicops.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:413121415231:android:c1e990990fc498c272d08a",
+        "mobilesdk_app_id": "1:364088621996:android:f7f89637b7892c68329809",
         "android_client_info": {
           "package_name": "com.marti21430.recicops"
         }
       },
       "oauth_client": [
         {
-          "client_id": "413121415231-hdg2uj6sfbcok1kodohjm8elo757sfqp.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.marti21430.recicops",
-            "certificate_hash": "06ff5b8b5749cc3f5f5b3d375c34ab733665bbd7"
-          }
-        },
-        {
-          "client_id": "413121415231-060gcs9bh6l5mnaik7ame5c4t6cje31l.apps.googleusercontent.com",
+          "client_id": "364088621996-kv1bhb0m52f95n9pvvfh3q331qvgigt2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBHSnJS4-q7rAXNCqTAzw3Mh2OOx8d_RCw"
+          "current_key": "AIzaSyD3vtZF1K2DwOffx_Nas5KxR-dNc0qzqes"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "413121415231-060gcs9bh6l5mnaik7ame5c4t6cje31l.apps.googleusercontent.com",
+              "client_id": "364088621996-kv1bhb0m52f95n9pvvfh3q331qvgigt2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

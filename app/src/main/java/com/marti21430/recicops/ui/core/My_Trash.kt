@@ -43,7 +43,9 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
         bottombar.selectedItemId = R.id.menu_item_my_trash
         bottombar.setOnItemSelectedListener {
             when(it.itemId) {
-                R.id.menu_item_myprogress -> requireView().findNavController().navigate(My_TrashDirections.actionMyTrashToProgress2())
+                R.id.menu_item_myprogress -> requireView().findNavController().navigate(
+                    My_TrashDirections.actionMyTrashToProgress2()
+                )
                 R.id.menu_item_location -> requireView().findNavController().navigate(
                     My_TrashDirections.actionMyTrashToExchangeCenters()
                 )
@@ -56,17 +58,19 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
     }
     private fun setListeners() {
         enterdata.setOnClickListener {
-            var var1 = botellas_plast.text.toString().toFloat()
-            var var2 = botellas_vid.text.toString().toFloat()
-            var var3 = bolsas_plast.text.toString().toFloat()
-            var var4 = envases_plast.text.toString().toFloat()
-            var var5 = envases_duro.text.toString().toFloat()
-            var var6 = libras_basura.text.toString().toFloat()
-            var var7 = Calendar.getInstance().time.time.toFloat()
+            var var1 = botellas_plast.text.toString().toFloatOrNull()
+            var var2 = botellas_vid.text.toString().toFloatOrNull()
+            var var3 = bolsas_plast.text.toString().toFloatOrNull()
+            var var4 = envases_plast.text.toString().toFloatOrNull()
+            var var5 = envases_duro.text.toString().toFloatOrNull()
+            var var6 = libras_basura.text.toString().toFloatOrNull()
+            var var7 = Calendar.getInstance().time.toString()
             CoroutineScope(Dispatchers.IO).launch {
                 var var8 = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
             }
-
+            requireView().findNavController().navigate(
+                My_TrashDirections.actionMyTrashToProgress2()
+            )
         }
     }
 }

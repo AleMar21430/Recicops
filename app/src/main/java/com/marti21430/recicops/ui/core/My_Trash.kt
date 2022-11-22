@@ -27,7 +27,7 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bottombar = view.findViewById(R.id.bottomNavigation_mainActivity)
-        enterdata = view.findViewById(R.id.button)
+        enterdata = view.findViewById(R.id.button_commit_firebase)
 
         botellas_plast = view.findViewById(R.id.editText_botellas_plast)
         botellas_vid = view.findViewById(R.id.editText_botellas_vid)

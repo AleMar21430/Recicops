@@ -49,5 +49,13 @@
     <string name="botellas_de_pl_stico_utilizadas">Botellas de plástico utilizadas</string>
     <string name="envases_de_pl_stico_utilizados">Envases de plástico utilizados</string>
     <string name="envases_de_duroport_utilizados">Envases de duroport utilizados</string>
+    <string name="default_int">0</string>
+    <string name="envases_de_pl_stico">Envases de Plástico:</string>
+    <string name="envases_de_duroport">Envases de Duroport:</string>
+    <string name="bolsas_de_pl_stico">Bolsas de Plástico:</string>
+    <string name="botellas_de_pl_stico">Botellas de Plástico:</string>
+    <string name="botellas_de_vidrio">Botellas de Vidrio:</string>
+    <string name="libras_de_basura">Libras de Basura:</string>
+    <string name="fecha">Fecha</string>
 
 </resources>

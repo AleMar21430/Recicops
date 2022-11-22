@@ -34,10 +34,16 @@ class Login : Fragment(R.layout.fragment_login) {
         CoroutineScope(Dispatchers.IO).launch {
             val currentUser = requireContext().dataStore.getPreferencesValue(KEY_EMAIL)
             if (currentUser != null) {
-                requireView().findNavController().navigate(
-                    LoginDirections.actionLoginToMyProfile()
-                )
+                navigateToListScreen()
             }
+        }
+    }
+
+    private fun navigateToListScreen() {
+        CoroutineScope(Dispatchers.Main).launch {
+            requireView().findNavController().navigate(
+                LoginDirections.actionLoginToMyProfile()
+            )
         }
     }
 
@@ -46,14 +52,6 @@ class Login : Fragment(R.layout.fragment_login) {
             loginUser(
                 email = email.text.toString(),
                 password = password.text.toString()
-            )
-            Toast.makeText(
-                context,
-                getString(R.string.Login_Success),
-                Toast.LENGTH_LONG
-            ).show()
-            requireView().findNavController().navigate(
-                LoginDirections.actionLoginToMyProfile()
             )
             }
         register.setOnClickListener {
@@ -64,7 +62,7 @@ class Login : Fragment(R.layout.fragment_login) {
     }
 
     private fun loginUser(email: String, password: String) {
-        if ((email == getString(R.string.my_email)) && email == password) {
+        if ((email == getString(R.string.my_email)) && password == getString(R.string.my_password)) {
             saveLoggedUser(email)
         } else {
             Toast.makeText(requireContext(), getString(R.string.Login_Error), Toast.LENGTH_LONG).show()
@@ -74,9 +72,7 @@ class Login : Fragment(R.layout.fragment_login) {
     private fun saveLoggedUser(email: String) {
         CoroutineScope(Dispatchers.IO).launch {
             requireContext().dataStore.savePreferencesValue(KEY_EMAIL, email)
-            requireView().findNavController().navigate(
-                LoginDirections.actionLoginToMyProfile()
-            )
         }
+        navigateToListScreen()
     }
 }

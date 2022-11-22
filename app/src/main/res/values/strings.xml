@@ -39,6 +39,7 @@
     <string name="register_success">Usuario registrado</string>
     <string name="maps">Abrir en Google Maps</string>
 
-    <string name="my_email">21430@uvg</string>
+    <string name="my_email"></string>
+    <string name="my_password"></string>
 
 </resources>

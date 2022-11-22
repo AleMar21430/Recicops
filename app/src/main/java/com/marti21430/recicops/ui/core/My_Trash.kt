@@ -68,6 +68,7 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
             CoroutineScope(Dispatchers.IO).launch {
                 var var8 = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
             }
+            
             requireView().findNavController().navigate(
                 My_TrashDirections.actionMyTrashToProgress2()
             )

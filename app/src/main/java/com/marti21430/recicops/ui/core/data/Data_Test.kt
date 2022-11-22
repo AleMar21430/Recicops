@@ -1,9 +1,7 @@
 package com.marti21430.recicops.ui.core.data
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.marti21430.recicops.R
@@ -39,16 +37,23 @@ class Data_Test :  Fragment(R.layout.fragment_my_trash) {
             buttonCommitFirebase.setOnClickListener {
 
                 val time = Calendar.getInstance().time.toString()
-                val bolsas_plast = editTextBolsasPlast.text.toString().toInt()
-                val botellas_plast = editTextBotellasPlast.text.toString().toInt()
-                val botellas_vid = editTextBotellasVid.text.toString().toInt()
-                val envases_plast = editTextEnvasesPlast.text.toString().toInt()
-                val envases_duro = editTextEnvasesDuro.text.toString().toInt()
-                val libras_basura = editTextLibrasBasura.text.toString().toFloat()
+                var bolsas_plast = editTextBolsasPlast.text.toString().toIntOrNull()
+                var botellas_plast = editTextBotellasPlast.text.toString().toIntOrNull()
+                var botellas_vid = editTextBotellasVid.text.toString().toIntOrNull()
+                var envases_plast = editTextEnvasesPlast.text.toString().toIntOrNull()
+                var envases_duro = editTextEnvasesDuro.text.toString().toIntOrNull()
+                var libras_basura = editTextLibrasBasura.text.toString().toFloatOrNull()
                 var user = ""
                 CoroutineScope(Dispatchers.IO).launch {
                     user = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
                 }
+
+                if (bolsas_plast == null){ bolsas_plast = 0 }
+                if (botellas_plast == null){ botellas_plast = 0 }
+                if (botellas_vid == null){ botellas_vid = 0 }
+                if (envases_duro == null){ envases_duro = 0 }
+                if (envases_plast == null){ envases_plast = 0 }
+                if (libras_basura == null){ libras_basura = 0.0f }
 
                 lifecycleScope.launch(Dispatchers.IO) {
                     placeRepository.createPlace(

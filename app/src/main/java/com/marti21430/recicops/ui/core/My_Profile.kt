@@ -11,7 +11,6 @@ import com.marti21430.recicops.R
 class My_Profile : Fragment(R.layout.fragment_my_profile) {
 
     private lateinit var tutorial: Button
-    private lateinit var settings: Button
     private lateinit var logout: Button
     private lateinit var canjes: Button
     private lateinit var whoarewe: Button
@@ -20,7 +19,6 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
         super.onViewCreated(view, savedInstanceState)
 
         tutorial = view.findViewById(R.id.button_como_usar)
-        settings = view.findViewById(R.id.button_configuracion)
         logout = view.findViewById(R.id.button_cerrar_sesion)
         whoarewe = view.findViewById(R.id.button_quienes_somos)
         canjes = view.findViewById(R.id.button_consumoscanjeados_myprofile)
@@ -33,9 +31,6 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
     private fun setListeners() {
         tutorial.setOnClickListener {
             requireView().findNavController().navigate(My_ProfileDirections.actionMyProfileToTutorial())
-        }
-        settings.setOnClickListener {
-                requireView().findNavController().navigate(My_ProfileDirections.actionMyProfileToProfileUpdate())
         }
         logout.setOnClickListener {
             requireView().findNavController().navigate(

@@ -42,10 +42,6 @@
             app:popUpTo="@id/my_Profile"
             app:popUpToInclusive="true"/>
         <action
-            android:id="@+id/action_my_Profile_to_profile_Update"
-            app:destination="@id/profile_Update"
-            app:popUpToInclusive="true"/>
-        <action
             android:id="@+id/action_my_Profile_to_progress"
             app:destination="@id/progress"
             app:popUpTo="@id/my_Profile"
@@ -106,27 +102,6 @@
             app:destination="@id/progress"
             app:popUpTo="@id/my_Trash"
             app:popUpToInclusive="true" />
-    </fragment>
-    <fragment
-        android:id="@+id/profile_Update"
-        android:name="com.marti21430.recicops.ui.core.Profile_Update"
-        android:label="fragment_profile_update"
-        tools:layout="@layout/fragment_profile_update" >
-        <action
-            android:id="@+id/action_profile_Update_to_exchange_Centers"
-            app:destination="@id/exchange_Centers"
-            app:popUpTo="@id/my_Profile"
-            app:popUpToInclusive="true"/>
-        <action
-            android:id="@+id/action_profile_Update_to_progress"
-            app:destination="@id/progress"
-            app:popUpTo="@id/my_Profile"
-            app:popUpToInclusive="true"/>
-        <action
-            android:id="@+id/action_profile_Update_to_my_Trash"
-            app:destination="@id/my_Trash"
-            app:popUpTo="@id/my_Profile"
-            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/progress"

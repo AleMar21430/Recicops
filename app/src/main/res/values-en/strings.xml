@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recicops</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="iniciar_sesi_n">Login</string>
+    <string name="registrarse">Register</string>
+    <string name="listo">Done</string>
+    <string name="quienes_somos">About us</string>
+    <string name="c_mo_usar_esta_app">How to use the app</string>
+    <string name="cerrar_sesi_n">Logout</string>
+    <string name="faq">FAQ</string>
+    <string name="nombre_y_apellido">User</string>
+    <string name="cancelar">Cancel</string>
+    <string name="actualizar">Update</string>
+    <string name="Info">Use the navigation bar at the bottom to find the following: Your achievements, Your weekly trash, locations of our exchange centers, and settings.</string>
+    <string name="email_example">\@email.example</string>
+    <string name="Login_Success">User logged in succesfully</string>
+    <string name="Login_Error">Usuarname or password incorrect</string>
+    <string name="About_US">The world produces exorbitant amounts of garbage, which is a major problem worldwide, therefore, it is necessary to take action by implementing technology and modern solutions that are available to everyone. To achieve this, we propose a recycling and garbage monitoring app with redemption of points in recycling centers, as we know that people motivated by rewards are more willing to do an action and form a habit. With the aforementioned solution, it is proposed that people use their cell phones for a productive activity and that they can meet the following Sustainable Development Goals: Climate Action, Responsible Cities and Communities, and Responsible Production and Consumption. It is intended that the user after some time using the app can know about the waste they produce and what they do with it, and that they know that they can do something productive with it and with their cell phone to get rewards. Therefore, the only thing left to say is "Let's recycle!</string>
+    <string name="nuestros_centros_de_intercambio">Our exchange centers:</string>
+    <string name="todo">TODO</string>
+    <string name="register_success">User Registered</string>
+    <string name="maps">Open in Google Maps</string>
+
+    <string name="my_email"></string>
+    <string name="my_password"></string>
+    <string name="ingresar_datos">Enter Data</string>
+    <string name="libras_de_basura_generada">Pounds of trash generated</string>
+    <string name="bolsas_de_pl_stico_utilizadas">Plastic bags used</string>
+    <string name="botellas_de_vidrio_utilizadas">Glass bottles used</string>
+    <string name="botellas_de_pl_stico_utilizadas">Plastic bottles used</string>
+    <string name="envases_de_pl_stico_utilizados">Plastic containers used</string>
+    <string name="envases_de_duroport_utilizados">Foam containers used</string>
+    <string name="default_int">0</string>
+    <string name="envases_de_pl_stico">Plastic containers:</string>
+    <string name="envases_de_duroport">Foam containers:</string>
+    <string name="bolsas_de_pl_stico">Plastic bags:</string>
+    <string name="botellas_de_pl_stico">Plastic bottles:</string>
+    <string name="botellas_de_vidrio">Glass bottles:</string>
+    <string name="libras_de_basura">Pounds of trash:</string>
+    <string name="fecha">Date</string>
+    <string name="firebase_fetch_error">Error, No internet connection</string>
+
+</resources>

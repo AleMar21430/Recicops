@@ -38,42 +38,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_consumoscanjeados_myprofile"
+        android:id="@+id/button_como_usar"
         style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="10dp"
-        android:text="@string/consumos_canjeados"
-        android:textAlignment="textStart"
-        android:textAllCaps="false"
-        android:textColor="@color/grey"
-        android:textSize="15sp"
-        app:icon="@drawable/ic_baseline_check_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_Name"
-        tools:ignore="TextContrastCheck" />
-
-    <Button
-        android:id="@+id/button_como_usar"
-        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
         android:text="@string/c_mo_usar_esta_app"
         android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textColor="@color/grey"
         android:textSize="15sp"
-        app:icon="@drawable/ic_baseline_error_24"
 
+        app:icon="@drawable/ic_baseline_error_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_consumoscanjeados_myprofile"
+        app:layout_constraintTop_toBottomOf="@+id/text_Name"
         tools:ignore="TextContrastCheck">
 
 

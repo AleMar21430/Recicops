@@ -1,41 +1,25 @@
 <resources>
     <string name="app_name">Recicops</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="iniciar_sesi_n">Iniciar Sesión</string>
     <string name="registrarse">Registrarse</string>
-    <string name="olvid_su_contrase_a">olvidó su contraseña?</string>
     <string name="listo">Listo</string>
-    <string name="username">Username</string>
-    <string name="configuraci_n">Configuración</string>
     <string name="quienes_somos">Quienes somos</string>
     <string name="c_mo_usar_esta_app">Cómo usar esta app</string>
     <string name="cerrar_sesi_n">Cerrar Sesión</string>
     <string name="faq">FAQ</string>
     <string name="nombre_y_apellido">Usuario</string>
-    <string name="actualizar_datos">Actualizar Datos:</string>
     <string name="cancelar">Cancelar</string>
     <string name="actualizar">Actualizar</string>
-    <string name="c_mo_utilizar_esta_app">Cómo utilizar esta app:</string>
     <string name="Info">Utilizar la barra de navegación en la parte de abajo para encontrar lo siguiente: Tus logros, Tu basura semanal, localidades de nuestros centros de cambio, y la configuración.</string>
     <string name="email_example">\@email.example</string>
-    <string name="consumos_canjeados">Consumos canjeados</string>
-    <string name="olvido_su_contrasenia">¿Olvido su contrasenia?</string>
-    <string name="SMS">SMS</string>
-    <string name="correo">Correo</string>
     <string name="Login_Success">Usuario loggeado exitosamente</string>
     <string name="Login_Error">Usuario o contraseña incorrectos</string>
     <string name="About_US">En el mundo se producen exorbitantes cantidades de basura, el cual es un gran problema a nivel mundial, por ello, es necesario tomar medidas implementando tecnología y soluciones modernas que estén al alcance de todo mundo. Para lograr esto, se propone una app de reciclaje y monitoreo de basura con canjeo de puntos en centros de reciclaje, pues sabemos que la gente motivada por recompensas está más dispuesta a hacer una acción y formar un hábito. Con la solución anteriormente mencionada se propone que las personas usen sus móviles para una actividad productiva y que puedan cumplir con los Objetivos de Desarrollo Sostenible siguientes: Acción por el clima, Ciudades y comunidades responsables, y Producción y consumo responsable. Se pretende que el usuario después de un tiempo usando la app pueda saber acerca de los residuos que produce y qué hace con ellos, y que sepa que puede hacer algo productivo con ellos y con su celular para obtener recompensas. Por ende lo único que queda decir es ¡A reciclar!</string>
     <string name="nuestros_centros_de_intercambio">Nuestros Centros de Intercambio:</string>
-    <string name="ingresa_la_contrasenia_nuevamente">Ingresa la contrasenia nuevamente</string>
-    <string name="ingresa_la_contrasenia">Ingresa la contrasenia</string>
-    <string name="reestablecer_contrasenia">Reestablecer contrasenia</string>
-    <string name="ingresa_la_contrasena">Ingresa la contrasenia</string>
-    <string name="reestablecer_contrasen">Reestablecer contrasenia</string>
     <string name="todo">TODO</string>
-    <string name="pie_recycler">Pie Recycler</string>
     <string name="register_success">Usuario registrado</string>
     <string name="maps">Abrir en Google Maps</string>
 
@@ -45,7 +29,6 @@
     <string name="libras_de_basura_generada">Libras de basura generada</string>
     <string name="bolsas_de_pl_stico_utilizadas">Bolsas de plástico utilizadas</string>
     <string name="botellas_de_vidrio_utilizadas">Botellas de vidrio utilizadas</string>
-    <string name="hojas_de_papel_utilizadas">Hojas de papel utilizadas</string>
     <string name="botellas_de_pl_stico_utilizadas">Botellas de plástico utilizadas</string>
     <string name="envases_de_pl_stico_utilizados">Envases de plástico utilizados</string>
     <string name="envases_de_duroport_utilizados">Envases de duroport utilizados</string>

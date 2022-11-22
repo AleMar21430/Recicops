@@ -24,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
         android:text="@string/registrarse"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,26 +76,30 @@
 
     <Button
         android:id="@+id/button_Register"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:text="@string/listo"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_Cancel_Register"
         app:layout_constraintTop_toBottomOf="@+id/inputLayout_loginFragment_email"
         tools:ignore="TextContrastCheck"></Button>
 
     <Button
         android:id="@+id/button_Cancel_Register"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:backgroundTint="#ED3E3E"
         android:text="@string/cancelar"
         android:textAllCaps="true"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_Register"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputLayout_loginFragment_email"
         tools:ignore="TextContrastCheck" />

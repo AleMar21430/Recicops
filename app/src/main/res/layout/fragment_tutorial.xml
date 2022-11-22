@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
-        android:text="@string/c_mo_utilizar_esta_app"
+        android:text="@string/c_mo_usar_esta_app"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

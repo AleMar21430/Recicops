@@ -38,4 +38,7 @@
     <string name="pie_recycler">Pie Recycler</string>
     <string name="register_success">Usuario registrado</string>
     <string name="maps">Abrir en Google Maps</string>
+
+    <string name="my_email">21430@uvg</string>
+
 </resources>

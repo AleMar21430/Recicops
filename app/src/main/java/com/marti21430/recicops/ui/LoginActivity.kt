@@ -51,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("TAG", "signInWithCredential:success")
                     CoroutineScope(Dispatchers.IO).launch {
-                        dataStore.savePreferencesValue(KEY_USERNAME, auth.currentUser?.displayName.toString())
+                        dataStore.savePreferencesValue(KEY_USERNAME, auth.currentUser!!.displayName.toString())
                         dataStore.savePreferencesValue(KEY_LOGOUT,"false")
                     }
                     startActivity(Intent(this, MainActivity::class.java))

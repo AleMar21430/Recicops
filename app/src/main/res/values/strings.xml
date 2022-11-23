@@ -46,5 +46,7 @@
     <string name="mi_historia">Mi Historia</string>
     <string name="share">Compartir</string>
     <string name="firebase_register_error">Error en firebase</string>
+    <string name="clientid">364088621996-kv1bhb0m52f95n9pvvfh3q331qvgigt2.apps.googleusercontent.com</string>
+    <string name="lanzar_google_sign_in">Google Sign in</string>
 
 </resources>

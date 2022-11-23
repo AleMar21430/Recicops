@@ -1,5 +1,6 @@
 package com.marti21430.recicops.ui.core
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -8,9 +9,11 @@ import androidx.fragment.app.*
 import androidx.navigation.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.marti21430.recicops.R
+import com.marti21430.recicops.ui.LoginActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+
 
 class My_Profile : Fragment(R.layout.fragment_my_profile) {
 
@@ -18,6 +21,7 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
     private lateinit var logout: Button
     private lateinit var whoarewe: Button
     private lateinit var bottombar: BottomNavigationView
+    private lateinit var googlesignin: Button
     private lateinit var username: TextView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -25,6 +29,7 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
 
         tutorial = view.findViewById(R.id.button_como_usar)
         logout = view.findViewById(R.id.button_cerrar_sesion)
+        googlesignin = view.findViewById(R.id.button_googlesignin)
         whoarewe = view.findViewById(R.id.button_quienes_somos)
         bottombar = view.findViewById(R.id.bottomNavigation_mainActivity)
         bottombar.selectedItemId = R.id.menu_item_profile
@@ -34,7 +39,7 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
         setName()
     }
 
-    private  fun setName(){
+    private fun setName(){
         CoroutineScope(Dispatchers.IO).launch {
             username.setText(requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString())
         }
@@ -55,7 +60,12 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
         whoarewe.setOnClickListener {
             requireView().findNavController().navigate(My_ProfileDirections.actionMyProfileToInfo2())
         }
-
+        googlesignin.setOnClickListener {
+            activity?.let{
+                val intent = Intent (this@My_Profile.context, LoginActivity::class.java)
+                requireActivity().startActivity(intent)
+            }
+        }
     }
     private fun setBottomBar(){
         bottombar.setOnItemSelectedListener {
@@ -70,7 +80,6 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
                     My_ProfileDirections.actionMyProfileToMyTrash()
                 )
             }
-
             true
         }
     }

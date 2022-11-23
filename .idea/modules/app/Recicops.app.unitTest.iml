@@ -64,12 +64,15 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/c9ecb84e8bd7c65585ea03ceb621e907/transformed/appcompat-1.5.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/f6c1d39bc47f2db72dbe0aa1a868dd40/transformed/firebase-auth-21.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/9ac50621fc96f74c00db835e5840c338/transformed/play-services-maps-18.1.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/f5f21b17ac4b4ded0bc53335b1e86838/transformed/play-services-auth-20.4.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/88595857f2a03f444c59c06112d529c0/transformed/viewpager2-1.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/ce421597a926ebf2091b925d8176011b/transformed/firebase-firestore-21.4.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/c669248a68aff55ec93befd61c82ca09/transformed/firebase-database-20.0.4-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/1d061f9aadd0c02fd0b9ef3ad6cf6458/transformed/firebase-database-collection-18.0.1-api.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/12defcabffeb547097b5d75aa1df1d3a/transformed/play-services-auth-api-phone-17.4.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/24aedb482312812325ad66c2cec5b25b/transformed/play-services-auth-api-phone-18.0.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/888fc8659fd84b16fb6d3d4295e4b522/transformed/play-services-safetynet-17.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/1591e7fb661c5b620a677ed707cf7e5e/transformed/play-services-auth-base-18.0.4-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/897f26671b125330cbeffcf7aeff6e10/transformed/play-services-fido-19.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/0d74814b4e2634cc97a6fa5dd6f9a33c/transformed/firebase-appcheck-interop-16.0.0-beta02-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/9427257b4b63c507378fb55ea683b3a1/transformed/play-services-base-18.0.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/6c9cb251cbec65980068fa16fea42aa1/transformed/firebase-auth-interop-20.0.0-api.jar</arg>
@@ -100,11 +103,11 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/af694c5f57eb67a994d39317df0c477d/transformed/vectordrawable-animated-1.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/a727e9c4eceed34dcd25c3f8c4dc6d07/transformed/vectordrawable-1.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/55125a9a5611cc79512b9df7a8a9027f/transformed/browser-1.4.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/1007c3d8772305a3c0b3146e5a73e9d1/transformed/legacy-support-core-utils-1.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/6e4928eab1a4f63fe3db4e04d5cfaf3e/transformed/loader-1.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/b58d744cf45e2dd2e83e345a32181350/transformed/viewpager-1.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/08176c059f14edab86289b10eabc284c/transformed/slidingpanelayout-1.2.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/7a99bd836d63ce3579f9a44a07ebeeca/transformed/customview-1.1.0-api.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/1007c3d8772305a3c0b3146e5a73e9d1/transformed/legacy-support-core-utils-1.0.0-api.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/6e4928eab1a4f63fe3db4e04d5cfaf3e/transformed/loader-1.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/6bc35ae353ea7c15de484cc76d3f331b/transformed/core-1.8.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/d09d703f7a2314453875422e19f42d14/transformed/lifecycle-runtime-2.5.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/4a3eabccf2af87747a729397585e2408/transformed/lifecycle-viewmodel-2.5.1-api.jar</arg>
@@ -316,7 +319,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: io.grpc:grpc-android:1.21.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-auth:21.1.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.browser:browser:1.4.0@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-auth-api-phone:17.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-auth-api-phone:18.0.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-safetynet:17.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-maps:18.1.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-database-ktx:20.0.4@aar" level="project" />
@@ -324,6 +327,9 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-database:20.0.4@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-appcheck-interop:16.0.0-beta02@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-auth-ktx:21.1.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-auth:20.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-auth-base:18.0.4@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-fido:19.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-fragment-ktx:2.5.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.navigation:navigation-fragment:2.5.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.fragment:fragment-ktx:1.5.2@aar" level="project" />

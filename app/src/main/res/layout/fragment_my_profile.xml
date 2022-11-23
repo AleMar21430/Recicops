@@ -23,6 +23,26 @@
         app:icon="@drawable/ic_baseline_close_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_googlesignin"
+        tools:ignore="TextContrastCheck"></Button>
+
+    <Button
+        android:id="@+id/button_googlesignin"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/lanzar_google_sign_in"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:icon="@drawable/ic_baseline_email_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_quienes_somos"
         tools:ignore="TextContrastCheck"></Button>
 

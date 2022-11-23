@@ -7,7 +7,6 @@ import androidx.navigation.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.marti21430.recicops.R
 
-
 class Info : Fragment(R.layout.fragment_about_us,) {
     private lateinit var bottombar: BottomNavigationView
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

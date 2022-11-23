@@ -8,15 +8,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.marti21430.recicops.R
 
 class Tutorial : Fragment(R.layout.fragment_tutorial) {
-
     private lateinit var bottombar: BottomNavigationView
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bottombar = view.findViewById(R.id.bottomNavigation_mainActivity)
+        bottombar.selectedItemId = R.id.menu_item_profile
         setBottomBar()
     }
     private fun setBottomBar(){
-        bottombar.selectedItemId = R.id.menu_item_profile
         bottombar.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.menu_item_myprogress -> requireView().findNavController().navigate(
@@ -34,5 +33,4 @@ class Tutorial : Fragment(R.layout.fragment_tutorial) {
             true
         }
     }
-
 }

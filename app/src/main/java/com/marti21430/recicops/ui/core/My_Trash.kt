@@ -76,7 +76,7 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
             var L_envases_plast = envases_plast.text.toString()
             var L_envases_duro = envases_duro.text.toString()
             var L_libras_basura = libras_basura.text.toString()
-            var L_user = "Walala"
+            var L_user = "Error"
             CoroutineScope(Dispatchers.IO).launch {
                 L_user = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
             }

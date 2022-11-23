@@ -42,5 +42,7 @@
     <string name="libras_de_basura">Pounds of trash:</string>
     <string name="fecha">Date</string>
     <string name="firebase_fetch_error">Error, No internet connection</string>
+    <string name="firebase_upload_succes">Data succesfully uploaded to the cloud</string>
+    <string name="firebase_upload_error">Connection Error</string>
 
 </resources>

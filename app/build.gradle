@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id("androidx.navigation.safeargs.kotlin")
-    // firebase
     id 'com.google.gms.google-services'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
@@ -56,6 +55,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:21.4.0'
     implementation 'com.google.firebase:firebase-auth:19.2.0'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.4'
 
     def nav_version = "2.5.1"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
@@ -68,7 +68,8 @@ dependencies {
     implementation "io.coil-kt:coil:$coil_version"
 
     // Firebase version declaration
-    implementation platform('com.google.firebase:firebase-bom:31.0.1')
+    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
     // Firebase auth
     implementation 'com.google.firebase:firebase-auth-ktx'
     // Firebase firestore

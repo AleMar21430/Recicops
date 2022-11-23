@@ -5,18 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import androidx.lifecycle.lifecycleScope
+import android.widget.Toast
 import androidx.navigation.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.marti21430.recicops.data.repository.place.PlaceRepository
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.marti21430.recicops.R
-import com.marti21430.recicops.data.local.entity.FireData
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.util.*
-import javax.inject.Inject
 
 class My_Trash : Fragment(R.layout.fragment_my_trash) {
     private lateinit var enterdata: Button
@@ -27,10 +25,7 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
     private lateinit var envases_plast: EditText
     private lateinit var envases_duro: EditText
     private lateinit var libras_basura: EditText
-    private lateinit var userId: String
 
-    @Inject
-    lateinit var placeRepository: PlaceRepository
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -66,16 +61,16 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
     }
     private fun setListeners() {
         enterdata.setOnClickListener {
-            val time = Calendar.getInstance().time.toString()
+            val L_time = Calendar.getInstance().time.toString()
             var L_bolsas_plast = bolsas_plast.text.toString().toIntOrNull()
             var L_botellas_plast = botellas_plast.text.toString().toIntOrNull()
             var L_botellas_vid = botellas_vid.text.toString().toIntOrNull()
             var L_envases_plast = envases_plast.text.toString().toIntOrNull()
             var L_envases_duro = envases_duro.text.toString().toIntOrNull()
             var L_libras_basura = libras_basura.text.toString().toFloatOrNull()
-            var user = ""
+            var L_user = ""
             CoroutineScope(Dispatchers.IO).launch {
-                user = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
+                L_user = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
             }
 
             if (L_bolsas_plast == null){ L_bolsas_plast = 0 }
@@ -85,27 +80,34 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
             if (L_envases_plast == null){ L_envases_plast = 0 }
             if (L_libras_basura == null){ L_libras_basura = 0.0f }
 
-            lifecycleScope.launch(Dispatchers.IO) {
-                placeRepository.createPlace(
-                    place = FireData(
-                        id = L_bolsas_plast,
-                        user = user,
-                        time = time,
-                        bolsas_plast = L_bolsas_plast,
-                        botellas_plast = L_botellas_plast,
-                        botellas_vid =L_botellas_vid,
-                        envases_plast = L_envases_plast,
-                        envases_duro = L_envases_duro,
-                        libras_basura = L_libras_basura
-                    ),
-                    owner = userId
-                )
-            }
-
-
-            requireView().findNavController().navigate(
-                My_TrashDirections.actionMyTrashToProgress2()
+            val Fire_Container = hashMapOf(
+                "User" to L_user,
+                "Time" to L_time,
+                "Bolsas de Plástico" to L_bolsas_plast,
+                "Botellas de Plástico" to L_botellas_plast,
+                "Botellas de Vidrio" to L_botellas_vid,
+                "Envases de Plástico" to L_envases_plast,
+                "Envases de Duroport" to L_envases_duro,
+                "Libras de Basura" to L_libras_basura,
             )
+
+            val firestore = Firebase.firestore
+
+            firestore.collection("user_data")
+                .add(Fire_Container)
+                .addOnSuccessListener {
+                    Toast.makeText(
+                        requireContext(),getString(R.string.firebase_upload_succes), Toast.LENGTH_LONG
+                    ).show()
+                    requireView().findNavController().navigate(
+                        My_TrashDirections.actionMyTrashToProgress2()
+                    )
+                }.addOnFailureListener {
+                    Toast.makeText(
+                        requireContext(),getString(R.string.firebase_upload_error), Toast.LENGTH_LONG
+                    ).show()
+                }
+
         }
     }
 }

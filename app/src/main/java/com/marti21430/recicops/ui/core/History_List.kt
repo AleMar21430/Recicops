@@ -51,6 +51,7 @@ class History_List : Fragment(R.layout.fragment_history_list) {
         envases_plast = view.findViewById(R.id.textView_envases_plast)
         envases_duro = view.findViewById(R.id.textView_envases_duro)
         libras_basura = view.findViewById(R.id.textView_libras_basura)
+        recyclerUsers = view.findViewById(R.id.history_recycler)
 
         database = Room.databaseBuilder(
             requireContext(),
@@ -58,6 +59,7 @@ class History_List : Fragment(R.layout.fragment_history_list) {
             "dbname"
         ).build()
 
+        getUsers()
         setBottomBar()
         setListeners()
     }
@@ -98,7 +100,6 @@ class History_List : Fragment(R.layout.fragment_history_list) {
     }
 
     private fun getUsers() {
-        recyclerUsers.visibility = View.GONE
         CoroutineScope(Dispatchers.IO).launch {
             val users = database.userDao().getUsers()
             userList.addAll(users)

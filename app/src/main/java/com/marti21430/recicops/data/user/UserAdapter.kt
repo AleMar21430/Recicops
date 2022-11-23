@@ -25,14 +25,14 @@ class UserAdapter(
 
         fun setData(user: User) {
             user.apply {
-                fecha.text = L_time
-                botellas_plast.text = L_botellas_plast
-                botellas_vid.text = L_botellas_vid
-                bolsas_plast.text = L_botellas_plast
-                envases_plast.text = L_envases_plast
-                envases_duro.text = L_envases_duro
-                libras_basura.text = L_libras_basura
-                username.text = L_user
+                fecha.setText(L_time)
+                botellas_plast.setText(L_botellas_plast)
+                botellas_vid.setText(L_botellas_vid)
+                bolsas_plast.setText(L_botellas_plast)
+                envases_plast.setText(L_envases_plast)
+                envases_duro.setText(L_envases_duro)
+                libras_basura.setText(L_libras_basura)
+                username.setText(L_user)
             }
         }
     }

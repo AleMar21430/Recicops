@@ -44,5 +44,6 @@
     <string name="firebase_fetch_error">Error, No internet connection</string>
     <string name="firebase_upload_succes">Data succesfully uploaded to the cloud</string>
     <string name="firebase_upload_error">Connection Error</string>
+    <string name="mi_historia">My History</string>
 
 </resources>

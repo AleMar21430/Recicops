@@ -15,7 +15,7 @@ class Past_List : Fragment(R.layout.fragment_past_list) {
         super.onViewCreated(view, savedInstanceState)
 
         bottombar = view.findViewById(R.id.bottomNavigation_mainActivity)
-        bottombar.selectedItemId = R.id.menu_item_location
+        bottombar.selectedItemId = R.id.menu_item_myprogress
         setBottomBar()
     }
 

@@ -5,8 +5,12 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.*
 import androidx.navigation.findNavController
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.marti21430.recicops.R
 import com.marti21430.recicops.ui.LoginActivity
@@ -22,6 +26,7 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
     private lateinit var whoarewe: Button
     private lateinit var bottombar: BottomNavigationView
     private lateinit var username: TextView
+    lateinit var mGoogleSignInClient: GoogleSignInClient
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -32,6 +37,13 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
         bottombar = view.findViewById(R.id.bottomNavigation_mainActivity)
         bottombar.selectedItemId = R.id.menu_item_profile
         username = view.findViewById(R.id.text_Name)
+
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+        mGoogleSignInClient= GoogleSignIn.getClient(this.requireActivity(),gso)
+
         setListeners()
         setBottomBar()
         setName()
@@ -51,9 +63,11 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
             CoroutineScope(Dispatchers.IO).launch {
                 requireContext().dataStore.savePreferencesValue(KEY_LOGOUT, "true")
             }
-            requireView().findNavController().navigate(
-                My_ProfileDirections.actionMyProfileToLogin()
-            )
+            mGoogleSignInClient.signOut().addOnCompleteListener {
+                requireView().findNavController().navigate(
+                    My_ProfileDirections.actionMyProfileToLogin()
+                )
+            }
         }
         whoarewe.setOnClickListener {
             requireView().findNavController().navigate(My_ProfileDirections.actionMyProfileToInfo2())

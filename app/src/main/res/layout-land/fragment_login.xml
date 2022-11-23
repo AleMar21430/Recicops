@@ -14,6 +14,7 @@
         android:layout_marginStart="10dp"
         android:text="@string/iniciar_sesi_n"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputLayout_loginFragment_email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/icon_loginFragment"></TextView>
 
@@ -22,8 +23,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:hint="@string/email"
+        app:layout_constraintBottom_toTopOf="@+id/inputLayout_loginFragment_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -44,8 +45,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:hint="@string/password"
+        app:layout_constraintBottom_toTopOf="@+id/button_Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputLayout_loginFragment_email"
@@ -77,12 +78,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:text="@string/registrarse"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_Login_google"
         app:layout_constraintEnd_toStartOf="@+id/button_Login"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputLayout_loginFragment_email"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout_loginFragment_password"
         tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     <Button
@@ -92,10 +92,10 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:text="@string/iniciar_sesi_n"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_Login_google"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button_Register"
-        app:layout_constraintTop_toBottomOf="@+id/inputLayout_loginFragment_email"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayout_loginFragment_password"
         tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck"></Button>
 
     <Button
@@ -103,11 +103,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:text="@string/lanzar_google_sign_in"
         app:icon="@drawable/googleg_standard_color_18"
         app:iconTint="#790000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

@@ -13,7 +13,13 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-
+import com.marti21430.recicops.ui.core.KEY_LOGOUT
+import com.marti21430.recicops.ui.core.KEY_USERNAME
+import com.marti21430.recicops.ui.core.dataStore
+import com.marti21430.recicops.ui.core.savePreferencesValue
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
     companion object{
@@ -26,10 +32,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         auth= FirebaseAuth.getInstance()
-        var login = findViewById<Button>(R.id.button_firebasesingin)
-        login.setOnClickListener {
-            GoogleSignIN()
-        }
 
         val gso = GoogleSignInOptions
             .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -37,8 +39,9 @@ class LoginActivity : AppCompatActivity() {
             .requestEmail()
             .build()
         googleAuth = GoogleSignIn.getClient(this, gso)
-    }
 
+        GoogleSignIN()
+    }
 
     private fun firebaseAuthWithGoogle(idToken: String?) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
@@ -47,8 +50,11 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("TAG", "signInWithCredential:success")
-                    val user = auth.currentUser
-                    startActivity(Intent(this,MainActivity::class.java))
+                    CoroutineScope(Dispatchers.IO).launch {
+                        dataStore.savePreferencesValue(KEY_USERNAME, auth.currentUser?.displayName.toString())
+                        dataStore.savePreferencesValue(KEY_LOGOUT,"false")
+                    }
+                    startActivity(Intent(this, MainActivity::class.java))
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w("TAG", "signInWithCredential:failure", task.exception)
@@ -68,9 +74,9 @@ class LoginActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode== CONST_SIGN_IN){
-            val task=GoogleSignIn.getSignedInAccountFromIntent(data)
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             try {
-                val accout=task.getResult(ApiException::class.java)
+                val accout = task.getResult(ApiException::class.java)
                 firebaseAuthWithGoogle(accout.idToken)
             }
             catch (e:ApiException){

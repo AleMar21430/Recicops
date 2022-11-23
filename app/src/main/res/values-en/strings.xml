@@ -46,5 +46,6 @@
     <string name="firebase_upload_error">Connection Error</string>
     <string name="mi_historia">My History</string>
     <string name="share">Share</string>
+    <string name="firebase_register_error">Error in Firebase</string>
 
 </resources>

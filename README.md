@@ -3,6 +3,8 @@
 # Integrantes:
 Alejandro José Martínez de León - 21430
 
+Diego Andrés Alonzo Medinilla - 20172
+
 # Features:
 Night mode
 

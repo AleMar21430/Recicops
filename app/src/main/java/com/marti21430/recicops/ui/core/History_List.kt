@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,12 +19,11 @@ import com.marti21430.recicops.data.user.UserAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.util.Calendar
 
 
 class History_List : Fragment(R.layout.fragment_history_list) {
     private lateinit var bottombar: BottomNavigationView
-    private lateinit var syncdata: Button
+    private lateinit var deletedata: Button
 
     private lateinit var fecha: TextView
     private lateinit var botellas_plast: TextView
@@ -40,7 +41,8 @@ class History_List : Fragment(R.layout.fragment_history_list) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        syncdata = view.findViewById(R.id.button_Sync)
+        deletedata = view.findViewById(R.id.button_deleteRecycler_Items)
+
         bottombar = view.findViewById(R.id.bottomNavigation_mainActivity)
         bottombar.selectedItemId = R.id.menu_item_myprogress
 
@@ -65,15 +67,10 @@ class History_List : Fragment(R.layout.fragment_history_list) {
     }
 
     private fun setListeners() {
-        syncdata.setOnClickListener {
-            fecha.setText(Calendar.getInstance().time.toString())
-            botellas_plast.setText("0")
-            botellas_vid.setText("0")
-            bolsas_plast.setText("0")
-            envases_plast.setText("0")
-            envases_duro.setText("0")
-            libras_basura.setText("0.05")
+        deletedata.setOnClickListener {
+            showDeleteDialog()
         }
+
     }
 
     private fun setBottomBar(){
@@ -105,6 +102,43 @@ class History_List : Fragment(R.layout.fragment_history_list) {
             userList.addAll(users)
             CoroutineScope(Dispatchers.Main).launch {
                 setupRecycler()
+            }
+        }
+    }
+
+    private fun showDeleteDialog() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.apply {
+            setTitle("Advertencia")
+            setMessage("¿Estás seguro que deseas eliminar la base de datos?")
+            setPositiveButton("Eliminar"
+            ) { _, _ ->
+                deleteAllUsers()
+                userList.clear()
+                userAdapter.notifyDataSetChanged()
+            }
+            setNegativeButton("Cancelar") { _, _ -> }
+            show()
+        }
+    }
+
+    private fun deleteAllUsers() {
+        CoroutineScope(Dispatchers.IO).launch {
+            val users = database.userDao().deleteAll()
+            CoroutineScope(Dispatchers.Main).launch {
+                if (users > 0) {
+                    Toast.makeText(
+                        requireContext(),
+                        "Se han eliminado $users usuarios",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    Toast.makeText(
+                        requireContext(),
+                        "Error al tratar de eliminar usuarios",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
             }
         }
     }

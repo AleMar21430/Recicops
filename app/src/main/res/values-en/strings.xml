@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Recicops</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="iniciar_sesi_n">Login</string>
@@ -41,14 +40,12 @@
     <string name="botellas_de_vidrio">Glass bottles:</string>
     <string name="libras_de_basura">Pounds of trash:</string>
     <string name="fecha">Date</string>
-    <string name="firebase_fetch_error">Error, No internet connection</string>
-    <string name="firebase_upload_succes">Data succesfully uploaded to the cloud</string>
     <string name="firebase_upload_error">Connection Error</string>
     <string name="mi_historia">My History</string>
     <string name="share">Share</string>
     <string name="firebase_register_error">Error in Firebase</string>
     <string name="clientid">364088621996-kv1bhb0m52f95n9pvvfh3q331qvgigt2.apps.googleusercontent.com</string>
-
     <string name="lanzar_google_sign_in">Google Sign in</string>
+    <string name="success">Success</string>
 
 </resources>

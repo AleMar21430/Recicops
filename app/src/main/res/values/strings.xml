@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Recicops</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="iniciar_sesi_n">Iniciar Sesión</string>
@@ -40,15 +39,12 @@
     <string name="botellas_de_vidrio">Botellas de Vidrio:</string>
     <string name="libras_de_basura">Libras de Basura:</string>
     <string name="fecha">Fecha</string>
-    <string name="firebase_fetch_error">Error, No hay conección al internet</string>
-    <string name="firebase_upload_succes">Datos ingresados correctamente a la nube</string>
     <string name="firebase_upload_error">Error de conección</string>
     <string name="mi_historia">Mi Historia</string>
     <string name="share">Compartir</string>
     <string name="firebase_register_error">Error en firebase</string>
     <string name="clientid">364088621996-kv1bhb0m52f95n9pvvfh3q331qvgigt2.apps.googleusercontent.com</string>
     <string name="lanzar_google_sign_in">Google Sign in</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="success">Exito</string>
 
 </resources>

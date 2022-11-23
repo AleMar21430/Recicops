@@ -109,9 +109,9 @@
     </fragment>
     <fragment
         android:id="@+id/progress"
-        android:name="com.marti21430.recicops.ui.core.Past_List"
+        android:name="com.marti21430.recicops.ui.core.History_List"
         android:label="fragment_progress"
-        tools:layout="@layout/fragment_past_list" >
+        tools:layout="@layout/fragment_history_list" >
         <action
             android:id="@+id/action_progress_to_exchange_Centers"
             app:destination="@id/exchange_Centers"

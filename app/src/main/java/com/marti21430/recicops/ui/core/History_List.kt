@@ -49,7 +49,7 @@ class History_List : Fragment(R.layout.fragment_history_list) {
         fecha = view.findViewById(R.id.textView_Fecha)
         botellas_plast = view.findViewById(R.id.textView_botellas_plast)
         botellas_vid = view.findViewById(R.id.textView_botellas_vid)
-        bolsas_plast = view.findViewById(R.id.textView_bolsas_plast)
+        bolsas_plast = view.findViewById(R.id.textView8)
         envases_plast = view.findViewById(R.id.textView_envases_plast)
         envases_duro = view.findViewById(R.id.textView_envases_duro)
         libras_basura = view.findViewById(R.id.textView_libras_basura)

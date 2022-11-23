@@ -81,12 +81,13 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
                 L_user = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
             }
 
-            if (L_bolsas_plast == null){ L_bolsas_plast = "0" }
-            if (L_botellas_plast == null){ L_botellas_plast = "0" }
-            if (L_botellas_vid == null){ L_botellas_vid = "0" }
-            if (L_envases_duro == null){ L_envases_duro = "0" }
-            if (L_envases_plast == null){ L_envases_plast = "0" }
-            if (L_libras_basura == null){ L_libras_basura = "0.0" }
+            if (L_user == ""){ L_user = "User_Empty" }
+            if (L_bolsas_plast == ""){ L_bolsas_plast = "0" }
+            if (L_botellas_plast == ""){ L_botellas_plast = "0" }
+            if (L_botellas_vid == ""){ L_botellas_vid = "0" }
+            if (L_envases_duro == ""){ L_envases_duro = "0" }
+            if (L_envases_plast == ""){ L_envases_plast = "0" }
+            if (L_libras_basura == ""){ L_libras_basura = "0.0" }
 
             val user = User(
                 L_user = L_user,

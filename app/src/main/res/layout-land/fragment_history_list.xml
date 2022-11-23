@@ -145,7 +145,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView_Fecha">
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/textView_bolsas_plast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -174,7 +174,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView_bolsas_plast"
+                android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"

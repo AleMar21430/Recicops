@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.marti21430.recicops.R
@@ -91,7 +92,7 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
                 "Libras de Basura" to L_libras_basura,
             )
 
-            val firestore = Firebase.firestore
+            val firestore = FirebaseFirestore.getInstance()
 
             firestore.collection("user_data")
                 .add(Fire_Container)

@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="25dp"
@@ -16,6 +16,7 @@
         android:text="@string/mi_historia"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toStartOf="@+id/button_Sync"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -220,5 +221,19 @@
         app:menu="@menu/bottom_nav_menu" >
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <Button
+        android:id="@+id/button_Sync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/todo"
+        android:foreground="@android:drawable/ic_popup_sync"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        android:foregroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

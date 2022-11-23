@@ -100,4 +100,20 @@
         app:layout_constraintStart_toEndOf="@id/button_Register"
         app:layout_constraintTop_toBottomOf="@+id/inputLayout_loginFragment_email"
         tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck"></Button>
+
+    <Button
+        android:id="@+id/button_Login_google"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/lanzar_google_sign_in"
+        app:icon="@drawable/googleg_standard_color_18"
+        app:iconTint="#790000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Login"
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck"></Button>
 </androidx.constraintlayout.widget.ConstraintLayout>

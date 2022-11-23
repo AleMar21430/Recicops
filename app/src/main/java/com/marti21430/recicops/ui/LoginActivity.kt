@@ -31,15 +31,12 @@ class LoginActivity : AppCompatActivity() {
             GoogleSignIN()
         }
 
-        // Configure Google Sign In
         val gso = GoogleSignInOptions
             .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.clientid))
             .requestEmail()
             .build()
-
         googleAuth = GoogleSignIn.getClient(this, gso)
-
     }
 
 

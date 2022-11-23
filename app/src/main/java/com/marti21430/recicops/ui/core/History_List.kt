@@ -109,15 +109,15 @@ class History_List : Fragment(R.layout.fragment_history_list) {
     private fun showDeleteDialog() {
         val builder = AlertDialog.Builder(requireContext())
         builder.apply {
-            setTitle("Advertencia")
-            setMessage("¿Estás seguro que deseas eliminar la base de datos?")
-            setPositiveButton("Eliminar"
+            setTitle(getString(R.string.warning))
+            setMessage(getString(R.string.warningmsg))
+            setPositiveButton(getString(R.string.eliminate)
             ) { _, _ ->
                 deleteAllUsers()
                 userList.clear()
                 userAdapter.notifyDataSetChanged()
             }
-            setNegativeButton("Cancelar") { _, _ -> }
+            setNegativeButton(getString(R.string.cancel)) { _, _ -> }
             show()
         }
     }

@@ -46,5 +46,9 @@
     <string name="clientid">364088621996-kv1bhb0m52f95n9pvvfh3q331qvgigt2.apps.googleusercontent.com</string>
     <string name="lanzar_google_sign_in">Google Sign in</string>
     <string name="success">Exito</string>
+    <string name="warning">Advertencia</string>
+    <string name="warningmsg">¿Estás seguro que deseas eliminar la base de datos?</string>
+    <string name="cancel">Cancelar</string>
+    <string name="eliminate">Eliminar</string>
 
 </resources>

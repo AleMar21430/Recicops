@@ -1,5 +1,7 @@
-package com.marti21430.recicops.ui.adapters
+package com.marti21430.recicops.data.adapters
 
-class TrashAdapter {
+class TrashAdapter (
+    private val trash: MutableList<Trash>
+        ){
 
 }

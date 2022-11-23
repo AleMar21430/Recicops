@@ -44,5 +44,6 @@
     <string name="firebase_upload_succes">Datos ingresados correctamente a la nube</string>
     <string name="firebase_upload_error">Error de conección</string>
     <string name="mi_historia">Mi Historia</string>
+    <string name="share">Compartir</string>
 
 </resources>

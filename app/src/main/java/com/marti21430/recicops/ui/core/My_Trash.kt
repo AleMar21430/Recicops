@@ -8,9 +8,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import com.marti21430.recicops.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -91,24 +88,9 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
                 "Envases de Duroport" to L_envases_duro,
                 "Libras de Basura" to L_libras_basura,
             )
-
-            val firestore = FirebaseFirestore.getInstance()
-
-            firestore.collection("user_data")
-                .add(Fire_Container)
-                .addOnSuccessListener {
-                    Toast.makeText(
-                        requireContext(),getString(R.string.firebase_upload_succes), Toast.LENGTH_LONG
-                    ).show()
-                    requireView().findNavController().navigate(
-                        My_TrashDirections.actionMyTrashToProgress2()
-                    )
-                }.addOnFailureListener {
-                    Toast.makeText(
-                        requireContext(),getString(R.string.firebase_upload_error), Toast.LENGTH_LONG
-                    ).show()
-                }
-
+            requireView().findNavController().navigate(
+                My_TrashDirections.actionMyTrashToProgress2()
+            )
         }
     }
 }

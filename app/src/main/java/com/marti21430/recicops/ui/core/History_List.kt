@@ -99,7 +99,7 @@ class History_List : Fragment(R.layout.fragment_history_list) {
     private fun getUsers() {
 
         CoroutineScope(Dispatchers.IO).launch {
-            val users = database.userDao().getUsers()
+            var users = database.userDao().getUsers()
             var Currentuser = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
             for(user in users){
                 if(user.L_user == Currentuser) {
@@ -130,25 +130,23 @@ class History_List : Fragment(R.layout.fragment_history_list) {
 
     private fun deleteAllUsers() {
         CoroutineScope(Dispatchers.IO).launch {
-            val users = database.userDao().deleteAll()
-            CoroutineScope(Dispatchers.Main).launch {
-                if (users > 0) {
-                    Toast.makeText(
-                        requireContext(),
-                        buildString {
-        append(getString(R.string.eliminado))
-        append(users)
-        append(getString(R.string.usuarios))
-    },
-                        Toast.LENGTH_SHORT
-                    ).show()
-                } else {
-                    Toast.makeText(
-                        requireContext(),
-                        getString(R.string.erroir),
-                        Toast.LENGTH_SHORT
-                    ).show()
+            var users = database.userDao().getUsers()
+            var Currentuser = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
+            for(user in users){
+                if(user.L_user == Currentuser) {
+                    database.userDao().delete(user)
                 }
+            }
+            CoroutineScope(Dispatchers.Main).launch {
+                Toast.makeText(
+                    requireContext(),
+                    buildString {
+                        append(getString(R.string.eliminado))
+                        append(users)
+                        append(getString(R.string.usuarios))
+                    },
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }

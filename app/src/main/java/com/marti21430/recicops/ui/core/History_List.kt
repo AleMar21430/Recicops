@@ -105,7 +105,6 @@ class History_List : Fragment(R.layout.fragment_history_list) {
                 if(user.L_user == Currentuser)
                 userList.add(user)
             }
-            userList.addAll(users)
             CoroutineScope(Dispatchers.Main).launch {
                 setupRecycler()
             }

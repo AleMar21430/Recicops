@@ -102,8 +102,9 @@ class History_List : Fragment(R.layout.fragment_history_list) {
             val users = database.userDao().getUsers()
             var Currentuser = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
             for(user in users){
-                if(user.L_user == Currentuser)
-                userList.add(user)
+                if(user.L_user == Currentuser) {
+                    userList.add(user)
+                }
             }
             CoroutineScope(Dispatchers.Main).launch {
                 setupRecycler()

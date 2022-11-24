@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.room.Room
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.marti21430.recicops.R
@@ -27,10 +28,12 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
     private lateinit var envases_duro: EditText
     private lateinit var libras_basura: EditText
 
+
     private lateinit var database: Database
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         bottombar = view.findViewById(R.id.bottomNavigation_mainActivity)
         enterdata = view.findViewById(R.id.button_commit)
 
@@ -76,30 +79,40 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
             var L_envases_plast = envases_plast.text.toString()
             var L_envases_duro = envases_duro.text.toString()
             var L_libras_basura = libras_basura.text.toString()
-            var L_user = "Error"
+            var L_user = ""
+
             CoroutineScope(Dispatchers.IO).launch {
                 L_user = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
-            }
 
-            if (L_user == ""){ L_user = "User_Empty" }
-            if (L_bolsas_plast == ""){ L_bolsas_plast = "0" }
-            if (L_botellas_plast == ""){ L_botellas_plast = "0" }
-            if (L_botellas_vid == ""){ L_botellas_vid = "0" }
-            if (L_envases_duro == ""){ L_envases_duro = "0" }
-            if (L_envases_plast == ""){ L_envases_plast = "0" }
-            if (L_libras_basura == ""){ L_libras_basura = "0.0" }
+                if (L_bolsas_plast == "") {
+                    L_bolsas_plast = "0"
+                }
+                if (L_botellas_plast == "") {
+                    L_botellas_plast = "0"
+                }
+                if (L_botellas_vid == "") {
+                    L_botellas_vid = "0"
+                }
+                if (L_envases_duro == "") {
+                    L_envases_duro = "0"
+                }
+                if (L_envases_plast == "") {
+                    L_envases_plast = "0"
+                }
+                if (L_libras_basura == "") {
+                    L_libras_basura = "0.0"
+                }
 
-            var user = User(
-                L_user = L_user,
-                L_time = L_time,
-                L_bolsas_plast = L_bolsas_plast,
-                L_botellas_plast = L_botellas_plast,
-                L_botellas_vid = L_botellas_vid,
-                L_envases_plast = L_envases_plast,
-                L_envases_duro = L_envases_duro,
-                L_libras_basura = L_libras_basura,
-            )
-            CoroutineScope(Dispatchers.IO).launch {
+                var user = User(
+                    L_user = L_user,
+                    L_time = L_time,
+                    L_bolsas_plast = L_bolsas_plast,
+                    L_botellas_plast = L_botellas_plast,
+                    L_botellas_vid = L_botellas_vid,
+                    L_envases_plast = L_envases_plast,
+                    L_envases_duro = L_envases_duro,
+                    L_libras_basura = L_libras_basura,
+                )
                 database.userDao().insert(user)
             }
             Toast.makeText(requireContext(), getString(R.string.success), Toast.LENGTH_LONG).show()
@@ -108,4 +121,5 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
             )
         }
     }
+
 }

@@ -15,6 +15,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+
 class My_Profile : Fragment(R.layout.fragment_my_profile) {
 
     private lateinit var tutorial: Button
@@ -22,6 +23,7 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
     private lateinit var whoarewe: Button
     private lateinit var bottombar: BottomNavigationView
     private lateinit var username: TextView
+    private lateinit var user: String
     lateinit var mGoogleSignInClient: GoogleSignInClient
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -47,7 +49,8 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
 
     private fun setName(){
         CoroutineScope(Dispatchers.IO).launch {
-            username.setText(requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString())
+            user = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
+            username.setText(user)
         }
     }
 
@@ -85,6 +88,4 @@ class My_Profile : Fragment(R.layout.fragment_my_profile) {
             true
         }
     }
-
-
 }

@@ -97,8 +97,14 @@ class History_List : Fragment(R.layout.fragment_history_list) {
     }
 
     private fun getUsers() {
+
         CoroutineScope(Dispatchers.IO).launch {
             val users = database.userDao().getUsers()
+            var Currentuser = requireContext().dataStore.getPreferencesValue(KEY_USERNAME).toString()
+            for(user in users){
+                if(user.L_user == Currentuser)
+                userList.add(user)
+            }
             userList.addAll(users)
             CoroutineScope(Dispatchers.Main).launch {
                 setupRecycler()
@@ -129,13 +135,17 @@ class History_List : Fragment(R.layout.fragment_history_list) {
                 if (users > 0) {
                     Toast.makeText(
                         requireContext(),
-                        "Se han eliminado $users usuarios",
+                        buildString {
+        append(getString(R.string.eliminado))
+        append(users)
+        append(getString(R.string.usuarios))
+    },
                         Toast.LENGTH_SHORT
                     ).show()
                 } else {
                     Toast.makeText(
                         requireContext(),
-                        "Error al tratar de eliminar usuarios",
+                        getString(R.string.erroir),
                         Toast.LENGTH_SHORT
                     ).show()
                 }

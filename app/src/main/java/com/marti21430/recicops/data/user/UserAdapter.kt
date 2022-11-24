@@ -14,13 +14,13 @@ class UserAdapter(
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
-        private val fecha: TextView = view.findViewById(R.id.textView_Fecha)
-        private val botellas_plast: TextView = view.findViewById(R.id.textView_botellas_plast)
-        private val botellas_vid: TextView = view.findViewById(R.id.textView_botellas_vid)
-        private val bolsas_plast: TextView = view.findViewById(R.id.textView_bolsas_plast)
-        private val envases_plast: TextView = view.findViewById(R.id.textView_envases_plast)
-        private val envases_duro: TextView = view.findViewById(R.id.textView_envases_duro)
-        private val libras_basura: TextView = view.findViewById(R.id.textView_libras_basura)
+        private var fecha: TextView = view.findViewById(R.id.textView_Fecha)
+        private var botellas_plast: TextView = view.findViewById(R.id.textView_botellas_plast)
+        private var botellas_vid: TextView = view.findViewById(R.id.textView_botellas_vid)
+        private var bolsas_plast: TextView = view.findViewById(R.id.textView_bolsas_plast)
+        private var envases_plast: TextView = view.findViewById(R.id.textView_envases_plast)
+        private var envases_duro: TextView = view.findViewById(R.id.textView_envases_duro)
+        private var libras_basura: TextView = view.findViewById(R.id.textView_libras_basura)
         private var username: TextView = view.findViewById(R.id.textView_User)
 
         fun setData(user: User) {

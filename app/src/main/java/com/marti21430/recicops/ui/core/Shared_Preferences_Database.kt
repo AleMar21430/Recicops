@@ -21,16 +21,8 @@ suspend fun DataStore<Preferences>.savePreferencesValue(key: String, value: Stri
         settings[dataStoreKey] = value
     }
 }
-
 suspend fun DataStore<Preferences>.getPreferencesValue(key: String): String? {
     val dataStoreKey = stringPreferencesKey(key)
     val preferences = data.first()
     return preferences[dataStoreKey]
-}
-
-suspend fun DataStore<Preferences>.removePreferencesValue(key: String) {
-    val dataStoreKey = stringPreferencesKey(key)
-    edit { settings ->
-        settings.remove(dataStoreKey)
-    }
 }

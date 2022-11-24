@@ -51,5 +51,8 @@
     <string name="warningmsg">¿Do you wish to delete the database?</string>
     <string name="cancel">Cancel</string>
     <string name="eliminate">Delete</string>
+    <string name="eliminado"></string>
+    <string name="usuarios"> _have been eliminated.</string>
+    <string name="erroir">Error</string>
 
 </resources>

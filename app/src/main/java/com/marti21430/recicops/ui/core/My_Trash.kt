@@ -89,7 +89,7 @@ class My_Trash : Fragment(R.layout.fragment_my_trash) {
             if (L_envases_plast == ""){ L_envases_plast = "0" }
             if (L_libras_basura == ""){ L_libras_basura = "0.0" }
 
-            val user = User(
+            var user = User(
                 L_user = L_user,
                 L_time = L_time,
                 L_bolsas_plast = L_bolsas_plast,

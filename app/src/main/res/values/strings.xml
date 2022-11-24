@@ -50,5 +50,8 @@
     <string name="warningmsg">¿Estás seguro que deseas eliminar la base de datos?</string>
     <string name="cancel">Cancelar</string>
     <string name="eliminate">Eliminar</string>
+    <string name="eliminado">Se han eliminado_ </string>
+    <string name="usuarios"> _usuarios</string>
+    <string name="erroir">Error</string>
 
 </resources>
